@@ -1,5 +1,5 @@
 body{
-    background: url('../images/signin.jpg') no-repeat fixed;
+    background: url('../images/background.jpg') no-repeat fixed;
     background-size: 100%;
 }
 
@@ -64,6 +64,6 @@ button:hover{
 .msg{
     padding-left: 20px;
     height: 1em;
-    font-size: 20px;
+    font-size: 13px;
     color: red;
 }
