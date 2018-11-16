@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/liuyh73/cloudgo/models"
 )
@@ -18,7 +17,6 @@ func (c *SigninController) Get() {
 
 func (c *SigninController) Post() {
 	username := c.Ctx.Request.FormValue("username")
-	fmt.Println("***********" + username)
 	c.TplName="detail.jade"
 	c.Ctx.Redirect(302, "/detail/"+username)
 }
