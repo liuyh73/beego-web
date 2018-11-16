@@ -1,11 +1,11 @@
 var userList=[];
-var usernameState=idState=telphoneState=emailState=passwordState=ConfirmPasswordState=false;
+var usernameState=idState=telephoneState=emailState=passwordState=ConfirmPasswordState=false;
 
 window.onload=function(){
     $("span.msg").addClass("hide");
     $("#username").bind('blur',handleUsername);
     $("#id").bind('blur',handleId);
-    $("#telphone").bind('blur',handleTelphone);
+    $("#telephone").bind('blur',handleTelephone);
     $("#email").bind('blur',handleEmail);
     $("#password").bind('blur',handlePassword);
     $("#confirmPassword").bind('blur',handleConfirmPassword);
@@ -45,19 +45,19 @@ function handleId(){
     }
 }
 
-function handleTelphone(){
+function handleTelephone(){
     var re=/^[1-9]\d{10}$/;
     var msg=document.getElementsByClassName("msg")[2];
-
-    if(re.test($("#telphone").val())){
+    console.log($("#telephone").val())
+    if(re.test($("#telephone").val())){
         msg.classList.add("hide");
-        $("#telphoneCheck").html('<i class="fa fa-check-square"></i>');
-        telphoneState=true;
+        $("#telephoneCheck").html('<i class="fa fa-check-square"></i>');
+        telephoneState=true;
     }
     else{
         msg.classList.remove("hide");
-        $("#telphoneCheck").html('');
-        telphoneState=false;
+        $("#telephoneCheck").html('');
+        telephoneState=false;
     }
 }
 
@@ -116,21 +116,21 @@ function handleReset(){
     $("input").val("");
     $("#usernameCheck").html('');
     $("#idCheck").html('');
-    $("#telphoneCheck").html('');
+    $("#telephoneCheck").html('');
     $("#emailCheck").html('');
 }
 
 function handleRegister(){
-    handleUsername();handleId();handleTelphone();handleEmail();handlePassword();handleConfirmPassword();
+    handleUsername();handleId();handleTelephone();handleEmail();handlePassword();handleConfirmPassword();
 
     var msg=document.getElementsByClassName("msg")[6];
-    if(usernameState && idState && telphoneState && emailState && passwordState && confirmPasswordState){
+    if(usernameState && idState && telephoneState && emailState && passwordState && confirmPasswordState){
 
         msg.classList.add("hide");
         var newuser={};
         newuser.username=$("#username").val();
         newuser.id=$("#id").val();
-        newuser.telphone=$("#telphone").val();
+        newuser.telephone=$("#telephone").val();
         newuser.email=$("#email").val();
 
         userList.push(newuser);
