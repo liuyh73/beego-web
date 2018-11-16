@@ -28,10 +28,17 @@ func addJadeTemplate() {
 		}
 
 		// 把jade文件读取出来的[]byte转化为template string
-		fmt.Println(string(content))
 		tmplStr, err := jade.Parse("tmplStr", content)
-		// tmplStr, err := jade.ParseFile(jadePath)
-		fmt.Printf("%s\n", tmplStr)
+		// file, err := os.OpenFile("tmpl.html", os.O_APPEND, 0644)
+		// if err != nil {
+		// 	fmt.Println(err)
+		// }
+		// defer file.Close()
+		// len, err := file.WriteString(tmplStr)
+		// if err != nil {
+		// 	fmt.Println(err)
+		// }
+		// fmt.Printf("****%s*****%d\n", tmplStr, len)
 		if err != nil {
 			return nil, fmt.Errorf("error loading jade template: %v", err)
 		}
@@ -39,7 +46,6 @@ func addJadeTemplate() {
 		// 将template string转化为template对象
 		tmpl := template.New("jade template")
 		tmpl, err = tmpl.Parse(tmplStr)
-		fmt.Println(err)
 		if err != nil {
 			return nil, fmt.Errorf("error loading jade template: %v", err)
 		}
