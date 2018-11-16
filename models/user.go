@@ -7,3 +7,5 @@ type User struct {
 	Telephone string
 	Id        string
 }
+
+var Users = make([]User, 0)
