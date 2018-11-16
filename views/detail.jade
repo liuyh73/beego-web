@@ -1,27 +1,26 @@
 doctype html
-html:
-    head:
-        meta(charset="utf-8")
-        title 用户详情
-        link(rel="icon" href="/static/images/icon.png")
-        link(rel="stylesheet" type="text/css" href="/static/css/detail.css")
-
-    body:
-        p=.error
-        div(class="Container")
-            h1 用户详情
-            form
-                p
-                    div 用户名: 
-                    span=.user.Username
-                p
-                    div 学  号: 
-                    span=.user.Id
-                p
-                    div 电  话: 
-                    span=.user.Telephone
-                p
-                    div 邮  箱: 
-                    span=.user.Email
-                a(href="/logout")
-                    button(type="button") 退出登录
+html
+  head
+    meta(charset="utf-8")
+    title 用户信息
+    link(rel="icon" href="/static/images/icon.png")
+    link(rel="stylesheet" type="text/css" href="/static/css/detail.css")
+  body
+    p=.error
+    div.Container
+      h1 用户信息
+      form
+        p
+          div 用户名: 
+          span=.user.Username
+        p
+          div 学  号: 
+          span=.user.Id
+        p
+          div 电  话: 
+          span=.user.Telephone
+        p
+          div 邮  箱: 
+          span=.user.Email
+        a(href="/signin")
+          button(type="button") 退出登录

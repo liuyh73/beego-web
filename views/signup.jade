@@ -3,11 +3,11 @@ html
     head
         title 用户注册
         meta(charset='utf-8')
-        link(rel="icon" href="/images/icon.png")
-        link(type='text/css' rel='stylesheet' href='/stylesheets/signup.css')
+        link(rel="icon" href="/static/images/icon.png")
+        link(type='text/css' rel='stylesheet' href='/static/css/signup.css')
         link(type='text/css' rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-        script(type='text/javascript' src='/javascripts/jquery-3.1.0.js')
-        script(type='text/javascript' src='/javascripts/signup.js')
+        script(type='text/javascript' src='/static/js/jquery-3.1.0.js')
+        script(type='text/javascript' src='/static/js/signup.js')
 
     body
         div(class="Container")
@@ -59,7 +59,7 @@ html
                 button(type="button" id="reset") 重置
                 button(type="submit" id="submit") 注册
                 <br/>
-                a(href="/")
+                a(href="/signin")
                     button(type="button" id="signin") 已有账号，登陆
                 <br/>
                 span(class="msg") 请正确填写信息之后再提交!
