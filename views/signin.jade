@@ -13,7 +13,7 @@ html
             img(src="/images/boat.png")
             form(method="post")
                 span 输入用户名: 
-                input(type="text" id="username" name="username" placeholder="Username" value=user.username)
+                input(type="text" id="username" name="username" placeholder="Username" value=.user.username)
                 span 输入密码: 
                 input(type="password" id="password" name="password" placeholder="Password" )
                 <br/>
@@ -21,5 +21,5 @@ html
                     button(type="button" id="regist") 注册
                 button(type="submit" id="signin") 登陆
                 <br/>
-                if error
-                    p(class="msg")!= error
+                if .error
+                    p(class="msg")!= .error
