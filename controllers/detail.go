@@ -3,6 +3,7 @@ package controllers
 import (
 	"github.com/liuyh73/cloudgo/models"
 	"github.com/astaxie/beego"
+	_ "github.com/Joker/jade"
 )
 
 type DetailController struct {
